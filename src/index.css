@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		--color-text-bar: #FFFFFF;
+		--color-text-screen: #FFFFFF;
+		--color-text-num-ope: #444B5A;
+		--color-text-equals: #FFFFFF;
+		--color-text-other: #FFFFFF;
+		--color-main: #3A4764;
+		--color-toggle: #232C43;
+		--color-keypad: #232C43;
+		--color-screen: #182034;
+		--color-button-one: #637097;
+		--color-button-two: #D03F2F;
+		--color-button-three: #EAE3DC;
+		--color-key1-shadow: #404E72;
+		--color-key2-shadow: #93261A;
+		--color-key3-shadow: #B4A597;
+	}
+	.theme2 {
+		--color-text-bar: #35352C;
+		--color-text-screen: #35352C;
+		--color-text-num-ope: #35352C;
+		--color-text-equals: #FFFFFF;
+		--color-text-other: #FFFFFF;
+		--color-main: #E6E6E6;
+		--color-toggle: #D1CCCC;
+		--color-keypad: #D1CCCC;
+		--color-screen: #EDEDED;
+		--color-button-one: #377F86;
+		--color-button-two: #CA5502;
+		--color-button-three: #E5E4E1;
+		--color-key1-shadow: #1B5F65;
+		--color-key2-shadow: #893901;
+		--color-key3-shadow: #A69D91;
+	}
+	.theme3 {
+		--color-text-bar: #FFE53D;
+		--color-text-screen: #FFE53D;
+		--color-text-num-ope: #FFE53D;
+		--color-text-equals: #1B2428;
+		--color-text-other: #FFFFFF;
+		--color-main: #160628;
+		--color-toggle: #1D0934;
+		--color-keypad: #1D0934;
+		--color-screen: #1D0934;
+		--color-button-one: #58077D;
+		--color-button-two: #00E0D1;
+		--color-button-three: #341C4F;
+		--color-key1-shadow: #BC15F4;
+		--color-key2-shadow: #6CF9F2;
+		--color-key3-shadow: #871C9C;
+	}
+}

@@ -4,13 +4,13 @@ import { Button } from './comps/Button';
 import { Screen } from './comps/Screen';
 import { Wrapper } from './comps/Wrapper';
 import { useState } from 'react';
+import { Layout } from './comps/Layout';
 
 
 const toLocaleString = (num) =>
   String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1 ");
 
 const removeSpaces = (num) => num.toString().replace(/\s/g, "");
-
 
 function App() {
   const btnValues = [
@@ -20,6 +20,17 @@ function App() {
     ['.', 0, '/', 'x'],
     ["+-", "RESET", '=']
   ]
+
+  const [theme, setTheme] = useState("")
+
+  const changeTheme = () => {
+    if (theme === "")
+      setTheme("theme2")
+    else if (theme === "theme2")
+      setTheme("theme3")
+    else if (theme === "theme3")
+      setTheme("")
+  }
 
   let [calc, setCalc] = useState({
     sign: "",
@@ -124,8 +135,10 @@ function App() {
 
   return (
     <>
+    <div className={"w-full h-full " + theme}>
+    <Layout>
         <Wrapper>
-          <Bar />
+          <Bar changeTheme={changeTheme} />
           <Screen value={calc.num ? calc.num : calc.res} />
           <ButtonBox>
             {
@@ -153,6 +166,8 @@ function App() {
             }
           </ButtonBox>
         </Wrapper>
+        </Layout>
+    </div>
     </>
   );
 }
